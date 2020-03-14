@@ -11,6 +11,7 @@
     <a class=logo><img width=52px src="img/main-logo-white.png"></a>
     <a class="title"><b>KKGK</b></a>
     <a class="active" href="#">Arknight</a>
+    <a style="color: gray" id="mobileWarn"></a>
 </div>
 
 <div class="entrybody">
@@ -138,7 +139,10 @@
     document.getElementById("voiceInfo").style.width = "0";
     }
     
-    
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+    document.getElementById("mobileWarn").innerHTML="Not optimized for mobile, some stuff might break";
+    }
     
     
 </script>
