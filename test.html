@@ -2,6 +2,7 @@
 <html>
 <body style="background-color: gray">
 
+
 <script id=sc1 src="js/_template.js"></script>   
 
 <h2>My First Web Page</h2>
@@ -14,16 +15,25 @@
 
 <img id="myImage" src="img/class_caster.png">
 
-
-
-<button onclick="document.getElementById(sc1).src='js/_template2.js'"> MIAO </button>
-
+<button onclick="classMedic()"> MIAO </button>
 
 
 
-<script src="js/_template.js"></script>   
 <script>
 
+var img = document.createElement("classMedic");    
+classMedic.src="img/class_medic.png";
+var div = document.getElementById('x');
+    
+classMedic.onload = function() {
+ 
+  div.innerHTML += '<img src="'+img.src+'" />'; 
+ 
+};    
+    
+function classMedic() {
+    document.getElementById(myImage).src="img/class_medic.png";
+}
 </script>
 
 

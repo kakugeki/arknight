@@ -1,5 +1,4 @@
-var operator = {
-    name:"Uwu Master 70",
-    artist:"Miau",
+    opName.innerHTML="Mithril";
+    opArtist.innerHTML="Zan";
+
     
-};

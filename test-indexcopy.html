@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="style.css"> 
 <link rel="stylesheet" href="font.css"> 
 
+<head></head>
+
 <body>
 <div class="topnav">
     <a class=logo><img width=52px src="img/main-logo-white.png"></a>
@@ -90,7 +92,10 @@
         <div id="page-list" style="display: block">
             <div class="operator list"> <center>
                 <h1><u>Operator List</u></h1><br>
-                Click image to see
+                Click image to see<br>
+                <?php
+echo "Hello World!";
+?>
                 <br>
                 <img onclick="operatorPageOpen()" src="img/operator/illith.png">
                 <img onclick="operatorPageOpen()" src="img/operator/illith.png">
@@ -109,7 +114,7 @@
     <br>
     <hr>
     <h2>DEV BUTTON</h2>
-        <button onclick="myFunctionTest()">
+        <button onclick="loadScript()">
         test
         </button>
     <hr>
@@ -147,14 +152,14 @@
     document.getElementById("mobileWarn").innerHTML="Not optimized for mobile, some stuff might break";
     }
     
+    
     var opImage = document.getElementById("op-img");
     var opName = document.getElementById("op-name");
     var opArtist = document.getElementById("btn-artist");
     var opFaction = document.getElementById("op-faction");
     var opClass = document.getElementById("op-class");
     
-    opName.innerHTML="Mithril";
-    opArtist.innerHTML="Zan";
+    
 </script>
 
 </body>
