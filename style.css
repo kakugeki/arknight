@@ -8,32 +8,27 @@ body{
 	background-color:#1A1A1E;
 }
 /*-- Base CSS End --*/
-
-/*-- CSS Extra --*/
-.fixed{
-    position: absolute;
-    overflow: hidden;
-}
-/*-- CSS Extra End --*/
-
 /*-- Layout --*/
 .column{
     float: left;
     width: 100%;
     padding: 0;
 }
-.column.1{
-    width: 25%;
-    background-color: red;
+.column.left{
+    width: 95%;
 }
-.column.2{
-    width: 65%;
-    background-color: blue;
+.column.right{
+    width: 5%;
+    height: 100%
 }
-.column.3{
-    width: 10%;
-    background-color: green;
+.row.top{
+    height: 320px;
 }
+.row.bottom{
+    height: 130px;
+    width: 600px;
+}
+
 /*-- Layout End --*/
 
 /*-- Top Navigation --*/
@@ -50,7 +45,7 @@ body{
     float: left;
     color: #FFFFFF;
     text-align: center;
-    padding: 18px 16px 18px 16px;
+    padding: 20px 18px 20px 18px;
     margin-bottom: 2;
     text-decoration: none;
     font-size: 17px;
@@ -64,15 +59,15 @@ body{
     color: #D6DDF6;
 }
 .topnav a.title {
-    margin-left: 62px;
     background-color: transparent;
     color: #FFFFFF;
     cursor: default;
 }
 .topnav a.logo {
-    position: fixed;
-    margin-left: 3px;
-    padding: 6px;
+    float: left;
+    margin-left: 12px;
+    margin-left: 12px;
+    padding: 2px;
     background-color: transparent;
 }
 .bottomtext {
@@ -114,36 +109,42 @@ body{
 /*-- Operator Page --*/
 .operator.select{
     max-height: 450px;
+    width: 100%;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 /*-- Naming --*/
 .op-name{
     font-size: 62px;
     text-decoration: underline;
-    position: absolute;
-    margin:326px 0px 0px 128px;
     cursor: default;
 }
 .artist-name{
-    font-size: 28px;
-    position: absolute;
-    margin:400px 0px 0px 128px;
-    cursor: zoom-in;
-}
-img.op-class{
-    width: 112px;
-    font-size: 28px;
-    margin:330px 0px 0px 8px;
-}
-img.op-faction{
     float: left;
-    width: 296px;
     font-size: 28px;
-    opacity: 65%;
-    margin:-22px 0px 0px -28px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+.op-class img{
+    margin-top: 8px;
+    margin-left: 8px;
+    float: left;
+    width: 112px;
+}
+.op-faction{
+    position: absolute;
+    overflow: hidden;
+}
+.op-faction img{
+    width: 296px;
+    opacity: 30%;
+    margin:-70px 0px 0px -38px;
 }
 /*-- Operator Image --*/
 img.op-img{
+    position: absolute;
     width: 320px;
     position: static;
     display: block;
@@ -153,25 +154,24 @@ img.op-img{
 }
 /*-- Content --*/
 /*-- Buttons --*/
-div.return{
-    position: absolute;
-    width: 200px;
+.return {
+    float: left;
+    margin: 8px;
+}
+.return img{ 
     height: 48px;
-    background-color: gray; 
-    margin: 8px 0px 0px 8px;
 }
-div.profile{
-    position: absolute;
-    min-width: 96px;
-    min-height: 48px;
-    background-color: gray;
-    margin: 8px 0px 0px 700px;
+.profile{
+    margin-top: 12px;
+    float: right;
 }
-div.voice{
-    position: absolute;
-    min-width: 96px;
-    min-height: 48px;
-    background-color: gray;
-    margin: 68px 0px 0px 700px;
+.profile img{
+    width: 36px;
 }
-
+.voice{
+    margin-top: 12px;
+    float: right;
+}
+.voice img{
+    width: 36px;
+}

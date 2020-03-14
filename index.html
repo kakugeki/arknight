@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<link rel="icon" href="img/LogoS.png">
+<link rel="icon" href="img/main-logo-black.png">
 <title>KKGK Arknight Collab</title>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="style.css"> 
@@ -8,7 +8,7 @@
 
 <body>
 <div class="topnav">
-    <a class=logo><img width=45px src="img/Faction-rhodesisland.png"></a>
+    <a class=logo><img width=52px src="img/main-logo-white.png"></a>
     <a class="title"><b>KKGK</b></a>
     <a class="active" href="#">Arknight</a>
 </div>
@@ -24,21 +24,37 @@
         </center> </div>
 <!-PAGE 2, OPERATOR PAGE-->    
         <div id="page-operator" class="operator select" style="display: show"> 
-            
-            <!-FACTION NAME CLASS ARTIST-->  
-            <div class="fixed"><img id="op-faction" class="op-faction" src="img/Faction-rhodesisland.png"></div>
-            <div class="fixed"><img id="op-class" class="op-class" src="img/class_specialist.png"></div>
-            <div id="op-name" class="op-name">$name</div>
-            <div id="artist-name" class="artist-name">$artist</div>
-            
-            <!-BUTTONS-->
-            <div class="return">Return</div>
-            <div id="op-profile" class="profile">Profile</div>
-            <div id="op-voice" class="voice">Voiceline</div>
-            
-            <!-IMAGE-->
+        
+        <!-ICON FACTION--> 
+        <div class="op-faction"><img id="op-faction" src="img/Faction-rhodesisland.png">
+        </div>   
+           
+            <div class="column left">    
+                <div class="row top"> 
+                    <!-BUTTON RETURN--> 
+                    <div class="return"><img id="btn-return" src="img/ui-back.png"></div> 
+                </div>
+                <div class="row bottom">
+                    <!-ICON CLASS--> 
+                    <div class="op-class"><img id="op-class"  src="img/class_specialist.png"></div>
+                    <!-OPERATOR NAME--> 
+                    <div id="op-name" class="op-name">$name</div>
+                    <!-ARTIST NAME--> 
+                    <button id="btn-artist" class="artist-name">$artist</button>
+                </div>     
+            </div>
+            <div class="column right">    
+                    <!-PROFILE BUTTON--> 
+                    <div class="profile"><img id="btn-profile" src="img/ui-profile.png"></div>
+                    <!-VOICE BUTTON--> 
+                    <div class="voice"><img id="btn-voice" src="img/ui-voice.png"></div>
+            </div> 
+
+             <!-IMAGE-->
+
+             
             <img id="op-img" class="op-img" style="opacity: 20%" src="img/operator/Mithril.png">
-            
+           
         </div>
 	</div>
 </div>
