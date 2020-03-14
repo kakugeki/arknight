@@ -29,6 +29,12 @@ body{
     overflow: hidden;
     margin-left: 5%;
     width: 90%;
+    overflow: auto;
+    height: 450px;
+    
+}
+.column.navMid::-webkit-scrollbar{
+    display: none;
 }
 .row.top{
     height: 320px;
@@ -229,7 +235,7 @@ img.op-img{
     top: 0;
     right: 0;
     background-color: #0C0C0D;
-    overflow-x: hidden;
+    overflow: hidden;
     transition: 0.5s;
 
 }
