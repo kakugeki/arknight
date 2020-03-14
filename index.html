@@ -19,14 +19,21 @@
 		
 <!-PAGE 2, OPERATOR PAGE-->
         <!-ICON FACTION--> 
-        <div id="page-operator" style="display: none">
+        <div id="page-operator" class="entryoperator">
+           <!-OPERATOR IMAGE-->
+                <div class="op-img">
+                <center>
+                <img id="op-img" style="opacity: 20%" src="img/operator/Mithril.png" onclick="myFunctionZoomOp()">
+                </center>
+            </div>
+           
             <div class="op-faction"><img id="op-faction" src="img/Faction-rhodesisland.png"></div>   
-
-            <div class="operator select" style="display: show"> 
+            
+            <div id="op-transition" class="operator select" style="display: show"> 
                 <div class="column left">    
                     <div class="row top"> 
                         <!-BUTTON RETURN--> 
-                        <div class="return"><img onclick="myFunctionSelectOperator()" id="btn-return" src="img/ui-back.png"></div> 
+                        <div class="return"><img onclick="operatorListOpen()" id="btn-return" src="img/ui-back.png"></div> 
                     </div>
                     <div class="row bottom">
                         <!-ICON CLASS--> 
@@ -39,14 +46,11 @@
                 </div>
                 <div class="column right">    
                         <!-PROFILE BUTTON--> 
-                        <div class="profile"><img onclick="openProfileInfo()" src="img/ui-profile.png"></div>
+                        <div id="profileExist" class="profile"><img onclick="openProfileInfo()" src="img/ui-profile.png"></div>
                         <!-VOICE BUTTON--> 
-                        <div class="voice"><img onclick="openVoiceInfo()" src="img/ui-voice.png"></div>
+                        <div id="voiceExist" class="voice"><img onclick="openVoiceInfo()" src="img/ui-voice.png"></div>
                 </div> 
-               
-                 <!-IMAGE-->
-                <img id="op-img" class="op-img" style="opacity: 20%" src="img/operator/Mithril.png">
-               
+                               
 <!-SIDEBAR PROFILE-->   
                 <div id="profileInfo" class="sidenav">
                     <div class="row">
@@ -88,10 +92,10 @@
                 <h1><u>Operator List</u></h1><br>
                 Click image to see
                 <br>
-                <img  onclick="myFunctionOperatorPage()" src="img/operator/illith.png">
-                <img onclick="myFunctionOperatorPage()" src="img/operator/illith.png">
-                <img onclick="myFunctionOperatorPage()" src="img/operator/illith.png">
-                <img onclick="myFunctionOperatorPage()" src="img/operator/illith.png">
+                <img onclick="operatorPageOpen()" src="img/operator/illith.png">
+                <img onclick="operatorPageOpen()" src="img/operator/illith.png">
+                <img onclick="operatorPageOpen()" src="img/operator/illith.png">
+                <img onclick="operatorPageOpen()" src="img/operator/illith.png">
             </center> </div>
         </div>
 	</div>
@@ -100,50 +104,59 @@
 <div class=bottomtext>
     <i>"Definitely not a rip-off of <a href="https://aceship.github.io/AN-EN-Tags/index.html">Arknight Toolbox</a> by Aceship and Faryzal2020."</i> <br>- Creator<br><br>
     Color scheme is from Firefox dark theme.<br>
-    Special thanks to everyone in KKGK Discord and Hans for making this possible.<br>
+    Special thanks to everyone in KKGK Discord, DV, and Hans for making this possible.<br>
     
     <br>
     <hr>
     <h2>DEV BUTTON</h2>
-        <button onclick="myFunctionSelectOperator()">
+        <button onclick="myFunctionTest()">
         test
         </button>
     <hr>
 </div>
 
 <script>
-    function myFunctionSelectOperator(){
-        document.getElementById("page-list").style.display ='block';    
-        document.getElementById("page-operator").style.display='none';
-    }
-    function myFunctionOperatorPage(){
-        document.getElementById("page-list").style.display ='none';    
-        document.getElementById("page-operator").style.display='block';
+    function myFunctionTest(){
+    document.getElementById("page-operator").style.display= 'block';
+    document.getElementById("op-transition").style.opacity= '0%';
     }
     
+    var pageOperator = document.getElementById("page-operator");
+    var pageList = document.getElementById("page-list");
+    var voiceInfo = document.getElementById("voiceInfo");
+    var profileInfo = document.getElementById("profileInfo");
+    var operatorImage = document.getElementById("op-img")
     
-    
+    function operatorListOpen() {
+    pageList.style.display = 'block';    
+    pageOperator.style.display= 'none';
+    }
+    function operatorPageOpen() {
+    pageList.style.display = 'none';    
+    pageOperator.style.display= 'block';
+    }
     
     
     function openProfileInfo() {
-    document.getElementById("profileInfo").style.width = "800px";
+    profileInfo.style.width = "800px";
     }
     function closeProfileInfo() {
-    document.getElementById("profileInfo").style.width = "0";
+    profileInfo.style.width = "0";
     }
-    
     function openVoiceInfo() {
-    document.getElementById("voiceInfo").style.width = "800px";
+    voiceInfo.style.width = "800px";
     }
     function closeVoiceInfo() {
-    document.getElementById("voiceInfo").style.width = "0";
+    voiceInfo.style.width = "0";
     }
+
+    
+    
     
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     if (isMobile) {
     document.getElementById("mobileWarn").innerHTML="Not optimized for mobile, some stuff might break";
     }
-    
     
 </script>
 

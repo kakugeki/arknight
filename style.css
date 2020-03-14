@@ -109,6 +109,10 @@ body{
     margin: auto;
     background-color:#242428;
 }
+.entryoperator{
+    transition: 0.5;
+    display: none;
+}
 /*-- Content --*/
 /*-- List Page --*/
 .operator.list{
@@ -120,14 +124,13 @@ body{
 .operator.list img{
     margin: 0px 4px 0px 4px ;
     width: 80px;
-    border: 8px;
-    border-color: white;
+    border: 8px solid black;
+    transition: 0.5s;
 }
 .operator.list img:hover{
     padding: 0px 8px 0px 8px ;
     width: 80px;
-    border: 12px;
-    border-color: black;
+    border: 8px solid white;
 }
 
 /*-- Operator Page --*/
@@ -137,6 +140,7 @@ body{
     width: 100%;
     overflow-y: hidden;
     overflow-x: hidden;
+    transition: 0.5s;
 }
 .operator.profile{
     max-width: 450px;
@@ -155,8 +159,12 @@ body{
     font-size: 28px;
     cursor: pointer;
     background-color: transparent;
-    border: none;
+    border: 2px solid transparent;
     color: white;
+    transition: 0.2s;
+}
+.artist-name:hover{
+    border: 2px solid white;
 }
 .op-class img{
     margin-top: 8px;
@@ -167,6 +175,7 @@ body{
 .op-faction{
     position: absolute;
     overflow: hidden;
+    transition: 0.5s;
 }
 .op-faction img{
     width: 296px;
@@ -174,15 +183,18 @@ body{
     margin:-70px 0px 0px -38px;
 }
 /*-- Operator Image --*/
-img.op-img{
+.op-img {
+    padding-top: 20px;
     position: absolute;
-    width: 320px;
-    position: static;
-    display: block;
-    margin-top: 5%;
-    margin-left: auto;
-    margin-right: auto;
+    overflow: hidden;
+    height: 430px;
+    width: 100%;
+    right: 0;
 }
+.op-img img{
+    height: 800px
+}
+
 /*-- Content --*/
 /*-- Buttons --*/
 .return {
@@ -191,6 +203,11 @@ img.op-img{
 }
 .return img{ 
     height: 48px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.return img:hover{ 
+    box-shadow: 0px 0px 0px 1px white
 }
 .profile{
     margin-top: 12px;
@@ -198,6 +215,11 @@ img.op-img{
 }
 .profile img{
     width: 36px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.profile img:hover{
+    box-shadow: 0px 0px 0px 1px white
 }
 .voice{
     margin-top: 12px;
@@ -205,6 +227,11 @@ img.op-img{
 }
 .voice img{
     width: 36px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.voice img:hover{
+    box-shadow: 0px 0px 0px 1px white
 }
 
 .profile-content{
@@ -266,3 +293,46 @@ img.op-img{
 }
 
 
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
