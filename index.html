@@ -12,57 +12,138 @@
     <a class="title"><b>KKGK</b></a>
     <a class="active" href="#">Arknight</a>
 </div>
+
 <div class="entrybody">
-	<div class="entry">
-<!-PAGE 1, OPERATOR SELECT-->
-	    <div id="page-list" class="operator list" style="display: none"> <center>
-            <h1><u>Operator List</u></h1><br>
-		    <img src="img/operator/illith.png">
-		    <img src="img/operator/illith.png">
-		    <img src="img/operator/illith.png">
-		    <img src="img/operator/illith.png">
-        </center> </div>
-<!-PAGE 2, OPERATOR PAGE-->    
-        <div id="page-operator" class="operator select" style="display: show"> 
-        
+	<div class="entry">	
+		
+<!-PAGE 2, OPERATOR PAGE-->
         <!-ICON FACTION--> 
-        <div class="op-faction"><img id="op-faction" src="img/Faction-rhodesisland.png">
-        </div>   
-           
-            <div class="column left">    
-                <div class="row top"> 
-                    <!-BUTTON RETURN--> 
-                    <div class="return"><img id="btn-return" src="img/ui-back.png"></div> 
+        <div id="page-operator" style="display: none">
+            <div class="op-faction"><img id="op-faction" src="img/Faction-rhodesisland.png"></div>   
+
+            <div class="operator select" style="display: show"> 
+                <div class="column left">    
+                    <div class="row top"> 
+                        <!-BUTTON RETURN--> 
+                        <div class="return"><img onclick="myFunctionSelectOperator()" id="btn-return" src="img/ui-back.png"></div> 
+                    </div>
+                    <div class="row bottom">
+                        <!-ICON CLASS--> 
+                        <div class="op-class"><img id="op-class"  src="img/class_specialist.png"></div>
+                        <!-OPERATOR NAME--> 
+                        <div id="op-name" class="op-name">$name</div>
+                        <!-ARTIST NAME--> 
+                        <button id="btn-artist" class="artist-name">$artist</button>
+                    </div>     
                 </div>
-                <div class="row bottom">
-                    <!-ICON CLASS--> 
-                    <div class="op-class"><img id="op-class"  src="img/class_specialist.png"></div>
-                    <!-OPERATOR NAME--> 
-                    <div id="op-name" class="op-name">$name</div>
-                    <!-ARTIST NAME--> 
-                    <button id="btn-artist" class="artist-name">$artist</button>
-                </div>     
-            </div>
-            <div class="column right">    
-                    <!-PROFILE BUTTON--> 
-                    <div class="profile"><img id="btn-profile" src="img/ui-profile.png"></div>
-                    <!-VOICE BUTTON--> 
-                    <div class="voice"><img id="btn-voice" src="img/ui-voice.png"></div>
-            </div> 
-
-             <!-IMAGE-->
-
+                <div class="column right">    
+                        <!-PROFILE BUTTON--> 
+                        <div class="profile"><img onclick="openProfileInfo()" src="img/ui-profile.png"></div>
+                        <!-VOICE BUTTON--> 
+                        <div class="voice"><img onclick="openVoiceInfo()" src="img/ui-voice.png"></div>
+                </div> 
+               
+                 <!-IMAGE-->
+                <img id="op-img" class="op-img" style="opacity: 20%" src="img/operator/Mithril.png">
+               
+<!-SIDEBAR PROFILE-->   
+                <div id="profileInfo" class="sidenav">
+                    <div class="row">
+                        <div class="column navMid">
+                            <div class="profile-content">
+                                <center>
+                                    People said that I can't have my own profile<br>I don't care.<br>Why?<br>Because I can miao miao
+                                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>psst hey, try scrolling down.<br><br><br><br><br><br><br><br><br><br><br><br>Miao
+                                </center>
+                                
+                            </div>
+                        </div>
+                        <div class="column navSide">
+                            <a href="javascript:void(0)" id="btnProfile" class="closebtn" onclick="closeProfileInfo()">&times;</a>
+                        </div>
+                    </div>
+                </div>
+                
+<!-SIDEBAR BOICE-->
+                <div id="voiceInfo" class="sidenav">
+                    <div class="row">
+                        <div class="column navMid">
+                            <div class="voice-content">
+                                <p>I BELIEVE THAT MY VOICE CAN BE HEARD EVEN FROM A TEXT!!!! MIAOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!!!!!!!!!!!!!!!!!!</p>
+                            </div>
+                        </div>
+                        <div class="column navSide">
+                            <a href="javascript:void(0)" id="btnVoice" class="closebtn" onclick="closeVoiceInfo()">&times;</a>
+                        </div>
+                     </div>
+                </div>
              
-            <img id="op-img" class="op-img" style="opacity: 20%" src="img/operator/Mithril.png">
-           
+            </div>
+            
+        </div>
+<!-PAGE 1, OPERATOR SELECT-->
+        <div id="page-list" style="display: block">
+            <div class="operator list"> <center>
+                <h1><u>Operator List</u></h1><br>
+                Click image to see
+                <br>
+                <img  onclick="myFunctionOperatorPage()" src="img/operator/illith.png">
+                <img onclick="myFunctionOperatorPage()" src="img/operator/illith.png">
+                <img onclick="myFunctionOperatorPage()" src="img/operator/illith.png">
+                <img onclick="myFunctionOperatorPage()" src="img/operator/illith.png">
+            </center> </div>
         </div>
 	</div>
 </div>
+
 <div class=bottomtext>
     <i>"Definitely not a rip-off of <a href="https://aceship.github.io/AN-EN-Tags/index.html">Arknight Toolbox</a> by Aceship and Faryzal2020."</i> <br>- Creator<br><br>
     Color scheme is from Firefox dark theme.<br>
     Special thanks to everyone in KKGK Discord and Hans for making this possible.<br>
+    
+    <br>
+    <hr>
+    <h2>DEV BUTTON</h2>
+        <button onclick="myFunctionSelectOperator()">
+        test
+        </button>
+    <hr>
 </div>
+
+<script>
+    function myFunctionSelectOperator(){
+        document.getElementById("page-list").style.display ='block';    
+        document.getElementById("page-operator").style.display='none';
+    }
+    function myFunctionOperatorPage(){
+        document.getElementById("page-list").style.display ='none';    
+        document.getElementById("page-operator").style.display='block';
+    }
+    
+    
+    
+    
+    
+    function openProfileInfo() {
+    document.getElementById("profileInfo").style.width = "800px";
+    }
+    function closeProfileInfo() {
+    document.getElementById("profileInfo").style.width = "0";
+    }
+    
+    function openVoiceInfo() {
+    document.getElementById("voiceInfo").style.width = "800px";
+    }
+    function closeVoiceInfo() {
+    document.getElementById("voiceInfo").style.width = "0";
+    }
+    
+    
+    
+    
+</script>
 
 </body>
 </html>
+
+

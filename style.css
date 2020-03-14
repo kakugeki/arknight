@@ -19,7 +19,16 @@ body{
 }
 .column.right{
     width: 5%;
-    height: 100%
+    height: 100%;
+}
+.column.navSide{
+    overflow: hidden;
+    width: 5%;
+}
+.column.navMid{
+    overflow: hidden;
+    margin-left: 5%;
+    width: 90%;
 }
 .row.top{
     height: 320px;
@@ -97,8 +106,10 @@ body{
 /*-- Content --*/
 /*-- List Page --*/
 .operator.list{
+    position: relative;
     max-height: 450px;
     overflow-y: auto;
+    transition: 0.5s;
 }
 .operator.list img{
     margin: 0px 4px 0px 4px ;
@@ -106,12 +117,26 @@ body{
     border: 8px;
     border-color: white;
 }
+.operator.list img:hover{
+    padding: 0px 8px 0px 8px ;
+    width: 80px;
+    border: 12px;
+    border-color: black;
+}
+
 /*-- Operator Page --*/
 .operator.select{
+    position: relative;
     max-height: 450px;
     width: 100%;
     overflow-y: hidden;
     overflow-x: hidden;
+}
+.operator.profile{
+    max-width: 450px;
+    position: relative;
+    width: 100%;
+    padding: 5%;
 }
 /*-- Naming --*/
 .op-name{
@@ -175,3 +200,63 @@ img.op-img{
 .voice img{
     width: 36px;
 }
+
+.profile-content{
+    padding: 5%;
+}
+
+.voice-content{
+    padding: 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sidenav {
+    height: 450px;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #0C0C0D;
+    overflow-x: hidden;
+    transition: 0.5s;
+
+}
+
+.sidenav a {
+    text-decoration: none;
+    color: #818181;
+    display: hidden;
+    transition: 2.2s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.closebtn{
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    font-size: 48px;
+    text-decoration: none;
+    color: #818181;
+    transition: 0.2s;
+}
+.closebtn:hover{
+    transition: 0.2s;   
+    color: #f1f1f1;
+}
+
+
