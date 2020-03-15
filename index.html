@@ -167,7 +167,6 @@
 <script>
     
     $(document).ready(function(){
-        $(".list").css("opacity","100%")
         $(".op-individual").click(function(){
             $("#page-list").fadeToggle(200).css("display", "none");
             $("#page-operator").fadeToggle(200).css("display", "block");   
@@ -194,7 +193,7 @@
 
     $(document).ready(function(){
         $("#op1").click(function(){
-            $("#loading").show();
+            $("#loading").fadeIn(200);
             $("#op-name").load("demo_test.txt #p1");
             $.ajax({
             type: "GET",
@@ -211,11 +210,11 @@
     
     $(document).ready(function(){
 		$("#devbtn2").click(function() {
-           $("#loading").hide(); 
+           $("#loading").fadeOut(500); 
         });
 	});
     $(window).load(function() {
-		$("#loading").hide();
+		$("#loading").fadeOut(500);
 	});
     
     
