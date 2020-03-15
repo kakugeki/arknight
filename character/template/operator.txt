@@ -1,0 +1,36 @@
+// CLASS SELECTION
+// Caster Defender Guard Medic
+// Sniper Specialist Supporter Vanguard
+
+// FACTION SELECTION
+// Abyssal Blacksteel Kazimierz Kjerag
+// Laterano Leithanien Lungmen Penguin
+// Reunion Rhine Rhodes Rim
+// Siesta Ursus Victoria 
+
+var operator = {
+    name:       "NAME",
+    class:      "CLASS", 
+    faction:    "FACTION",
+    artist:     "YOUR NAME",
+    profile:    false,
+    voice:      false,
+};
+
+var profile = {
+    codeName:   "NAME",
+    gender:     "GENDER",
+    combatExp:  "YEAR",
+    birthPlace: "BIRTH PLACE",
+    birthDate:  "DAYMONTH",
+    race:       "NIGGER",
+    height:     "XCM",
+    
+    pStr:       "Standard",
+    mobillity:  "Standard",
+    pRes:       "Standard",
+    tactic:     "Standard",
+    combat:     "Standard",
+    arts:       "Standard"    
+}
+

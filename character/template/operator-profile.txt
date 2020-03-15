@@ -1,0 +1,21 @@
+<div id="profile.infection">
+    INFECTIONSTATUS    
+</div>
+<div id="profile.bio">
+    PROFILE
+</div>
+<div id="profile.arc1">
+    ARCHIVE1
+</div>
+<div id="profile.arc3">
+    ARCHIVE2
+</div>
+<div id="profile.arc3">
+    ARCHIVE3
+</div>
+<div id="profile.arc4">
+    ARCHIVE4
+</div>
+<div id="profile.prom">
+    PROMOTIONRECORD
+</div>

@@ -1,0 +1,32 @@
+<h2>jQuery and AJAX is FUN!!!</h2>
+<div id="p1" style="background-color='red'">Mithril</div>
+<p id="p2">q is some text in a paragraph.</p>
+<p id="p3">w is some text in a paragraph.</p>
+
+    var pageOperator = document.getElementById("page-operator");
+    var pageList = document.getElementById("page-list");
+    var voiceInfo = document.getElementById("voiceInfo");
+    var profileInfo = document.getElementById("profileInfo");
+    
+    
+    
+    function operatorListOpen() {
+    pageList.style.display = 'block';    
+    pageOperator.style.display= 'none';
+    }
+    function operatorPageOpen() {
+    pageList.style.display = 'none';    
+    pageOperator.style.display= 'block';
+    }
+    function openProfileInfo() {
+    profileInfo.style.width = "800px";
+    }
+    function closeProfileInfo() {
+    profileInfo.style.width = "0";
+    }
+    function openVoiceInfo() {
+    voiceInfo.style.width = "800px";
+    }
+    function closeVoiceInfo() {
+    voiceInfo.style.width = "0";
+    }

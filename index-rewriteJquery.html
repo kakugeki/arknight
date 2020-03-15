@@ -37,7 +37,7 @@
                 <div class="column left">    
                     <div class="row top"> 
                         <!-BUTTON RETURN--> 
-                        <div class="return"><img onclick="operatorListOpen()" id="btn-return" src="img/ui-back.png"></div> 
+                        <div class="return"><img id="btn-return" src="img/ui-back.png"></div> 
                     </div>
                     <div class="row bottom">
                         <!-ICON CLASS--> 
@@ -86,21 +86,61 @@
                         </div>
                      </div>
                 </div>
-             
             </div>
-            
         </div>
 <!-PAGE 1, OPERATOR SELECT-->
         <div id="page-list" style="display: block">
-            <div class="operator list"> <center>
-                <h1><u>Operator List</u></h1><br>
-                Click image to see
-                <br>
-                <img onclick="operatorPageOpen()" src="img/operator/illith.png">
-                <img onclick="operatorPageOpen()" src="img/operator/illith.png">
-                <img onclick="operatorPageOpen()" src="img/operator/illith.png">
-                <img onclick="operatorPageOpen()" src="img/operator/illith.png">
-            </center> </div>
+            <div class="operator list">                 
+                <div id="op1" class="op-individual">
+                    <img src="img/operator/illith.png">  
+                    <div id="op-nameList1">123456789123</div>
+                </div>
+                
+                <div id="op2" class="op-individual">
+                    <img src="img/operator/illith.png">
+                    <div id="op-nameList2">123456789123</div>
+                </div> 
+                
+                <div id="op3" class="op-individual">
+                    <img src="img/operator/illith.png"> 
+                    <div id="op-nameList3">123456789123</div>
+                </div>
+                
+                <div id="op4" class="op-individual">
+                    <img src="img/operator/illith.png">  
+                    <div id="op-nameList4">123456789123</div>
+                </div>     
+                
+                <div id="op4" class="op-individual">
+                    <img src="img/operator/illith.png">  
+                    <div id="op-nameList4">123456789123</div>
+                </div>     
+                <div id="op4" class="op-individual">
+                    <img src="img/operator/illith.png">  
+                    <div id="op-nameList4">123456789123</div>
+                </div>       
+                <div id="op4" class="op-individual">
+                    <img src="img/operator/illith.png">  
+                    <div id="op-nameList4">123456789123</div>
+                </div>        
+                <div id="op4" class="op-individual">
+                    <img src="img/operator/illith.png">  
+                    <div id="op-nameList4">123456789123</div>
+                </div>    
+                <div id="op4" class="op-individual">
+                    <img src="img/operator/illith.png">  
+                    <div id="op-nameList4">123456789123</div>
+                </div>    
+                <div id="op4" class="op-individual">
+                    <img src="img/operator/illith.png">  
+                    <div id="op-nameList4">123456789123</div>
+                </div>    
+                <div id="op4" class="op-individual">
+                    <img src="img/operator/illith.png">  
+                    <div id="op-nameList4">123456789123</div>
+                </div>    
+                
+             </div>
         </div>
 	</div>
 </div>
@@ -112,53 +152,56 @@
     
     <br>
     <hr>
-    <h2>DEV BUTTON</h2>
-        <button onclick="myFunctionTest()">
-        test
+        <button onclick="location.reload(false);">
+        Reload Butthon
         </button>
     <hr>
 </div>
 
 <script>
-    var pageOperator = document.getElementById("page-operator");
-    var pageList = document.getElementById("page-list");
-    var voiceInfo = document.getElementById("voiceInfo");
-    var profileInfo = document.getElementById("profileInfo");
+    
+    $(document).ready(function(){
+        $(".list").css("opacity","100%")
+        $(".op-individual").click(function(){
+            $("#page-list").fadeToggle(200).css("display", "none");
+            $("#page-operator").fadeToggle(200).css("display", "block");   
+        });
+        $("#btn-return").click(function(){
+            $("#page-operator").fadeToggle(200, function(){
+            location.reload(false);     
+            });
+        });
+        $("#profileExist").click(function(){
+            $("#profileInfo").css("width", "100%"); 
+        });
+        $("#voiceExist").click(function(){
+            $("#voiceInfo").css("width", "100%");  
+        });
+        $("#btnProfile").click(function(){
+            $("#profileInfo").css("width", "0");  
+        });        
+        $("#btnVoice").click(function(){
+            $("#voiceInfo").css("width", "0");  
+        });
         
-    function operatorListOpen() {
-    pageList.style.display = 'block';    
-    pageOperator.style.display= 'none';
-    }
-    function operatorPageOpen() {
-    pageList.style.display = 'none';    
-    pageOperator.style.display= 'block';
-    }
-    function openProfileInfo() {
-    profileInfo.style.width = "800px";
-    }
-    function closeProfileInfo() {
-    profileInfo.style.width = "0";
-    }
-    function openVoiceInfo() {
-    voiceInfo.style.width = "800px";
-    }
-    function closeVoiceInfo() {
-    voiceInfo.style.width = "0";
-    }
+    });
 
+    $(document).ready(function(){
+        $("#op1").click(function(){
+            $("#op-name").load("demo_test.txt #p1");
+            $.ajax({
+            type: "GET",
+            url: "profile/template/operator.txt",
+            dataType: "script"
+            });
+        });
+    });    
+    
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     if (isMobile) {
     document.getElementById("mobileWarn").innerHTML="Not optimized for mobile, some stuff might break";
     }
     
-    var opImage = document.getElementById("op-img");
-    var opName = document.getElementById("op-name");
-    var opArtist = document.getElementById("btn-artist");
-    var opFaction = document.getElementById("op-faction");
-    var opClass = document.getElementById("op-class");
-    
-    opName.innerHTML="Mithril";
-    opArtist.innerHTML="Zan";
 </script>
 
 </body>

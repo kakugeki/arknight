@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-3.4.1.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $("#op1").click(function(){
+        $("#op-name").load("demo_scriptandstuff.txt #o1");
+        $("#op-class").load("demo_scriptandstuff.txt #o2");
+        $.ajax({
+            type: "GET",
+            url: "demo_jquery.js",
+            dataType: "script"
+        });
+        
+    });
+});
+
+</script>
+
+</head>
+<body>
+
+    <div id="op-name"> Johnson </div>
+    <div id="op-class"> Guard </div>
+    
+    <button id="op1">Get Script</button>
+    <button id="op2">CHANGE IT</button>
+
+</body>
+</html>
