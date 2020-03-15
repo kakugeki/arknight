@@ -31,11 +31,15 @@ body{
     width: 90%;
     overflow: auto;
     height: 450px;
-    
 }
 .column.navMid::-webkit-scrollbar{
     display: none;
 }
+.column.side50 {
+    width: 48%;
+    margin: 1%;
+}
+
 .row.top{
     height: 320px;
 }
@@ -84,6 +88,13 @@ body{
     margin-left: 12px;
     padding: 2px;
     background-color: transparent;
+}
+.navtitle {
+    font-size: 24px;
+    text-align: center;
+    padding: 12px;
+    background-color: black;
+    border-bottom: white solid 2px;
 }
 .middletext {
     right: 0;
@@ -252,15 +263,39 @@ body{
 .voice img:hover{
     box-shadow: 0px 0px 0px 1px white
 }
-
 .profile-content{
-    padding: 5%;
+    padding: 1%;
 }
-
 .voice-content{
-    padding: 5%;
+    padding: 1%;
 }
 
+    /*-- Profile Tab --*/
+.profile-basic {
+    background-color: #1A1A1E;
+    
+}
+.profile-basic table {
+    width: 100%;
+    text-align: center;
+}
+.profile-basic td {
+    width: 55%;
+    padding: 2px;
+}
+.profile-basic tr {
+    height: 38px;
+}
+.profile-exam {
+    background-color: #1A1A1E;
+}
+.profile-exam table {
+    width: auto;
+    text-align: center;
+}
+.profile-exam td {
+    width: 60%;
+}
 
 
 
@@ -301,8 +336,9 @@ body{
     z-index: 1;
     overflow: hidden;
     position: relative;
-    font-size: 48px;
+    font-size: 46px;
     text-decoration: none;
+    text-align: center;
     color: #818181;
     transition: 0.2s;
 }
