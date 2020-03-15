@@ -145,7 +145,10 @@
 	</div>
 </div>
 
-<div class=bottomtext>
+<div id="loading" class="middletext">
+    <center>Loading</center>
+</div>
+<div class="bottomtext">
     <i>"Definitely not a rip-off of <a href="https://aceship.github.io/AN-EN-Tags/index.html">Arknight Toolbox</a> by Aceship and Faryzal2020."</i> <br>- Creator<br><br>
     Color scheme is from Firefox dark theme.<br>
     Special thanks to everyone in KKGK Discord, DV, and Hans for making this possible.<br>
@@ -154,6 +157,9 @@
     <hr>
         <button onclick="location.reload(false);">
         Reload Butthon~~
+        </button>
+        <button id='devbtn2'>
+        Hide 'Loading'
         </button>
     <hr>
 </div>
@@ -201,6 +207,16 @@
     if (isMobile) {
     document.getElementById("mobileWarn").innerHTML="Not optimized for mobile, some stuff might break";
     }
+    
+    $(document).ready(function(){
+		$("#devbtn2").click(function() {
+           $("#loading").hide(); 
+        });
+	});
+    $(document).ready(function() {
+		$("#loading").hide();
+	});
+    
     
 </script>
 
