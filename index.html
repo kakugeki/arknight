@@ -194,6 +194,7 @@
 
     $(document).ready(function(){
         $("#op1").click(function(){
+            $("#loading").show();
             $("#op-name").load("demo_test.txt #p1");
             $.ajax({
             type: "GET",
@@ -213,7 +214,7 @@
            $("#loading").hide(); 
         });
 	});
-    $(document).ready(function() {
+    $(window).load(function() {
 		$("#loading").hide();
 	});
     
