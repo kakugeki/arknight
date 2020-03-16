@@ -1,3 +1,5 @@
+
+
 // CLASS SELECTION
 // Caster Defender Guard Medic
 // Sniper Specialist Supporter Vanguard
@@ -10,11 +12,11 @@
 
 var operator = {
     name:       "NAME",
-    class:      "CLASS", 
+    gclass:     "specialist",
     faction:    "FACTION",
     artist:     "YOUR NAME",
     profile:    false,
-    voice:      false,
+    voice:      false
 };
 
 var profile = {
@@ -31,6 +33,21 @@ var profile = {
     pRes:       "Standard",
     tactic:     "Standard",
     combat:     "Standard",
-    arts:       "Standard"    
+    arts:       "Standard"
+};
+
+
+// SCRIPT, IGNORE THESE
+document.getElementById("op-name").innerHTML = operator.name;
+document.getElementById("btn-artist").innerHTML = operator.artist;
+
+if (operator.profile == true) {
+    document.getElementById("profileExist").style.display = "block";
+}
+if (operator.voice == true) {
+    document.getElementById("voiceExist").style.display = "block";
 }
 
+
+
+//CLASS IFS

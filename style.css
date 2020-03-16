@@ -240,6 +240,7 @@ body{
     box-shadow: 0px 0px 0px 1px white;
 }
 .profile{
+    display: none;
     margin-top: 12px;
     float: right;
 }
@@ -252,6 +253,7 @@ body{
     box-shadow: 0px 0px 0px 1px white;
 }
 .voice{
+    display: none;
     margin-top: 12px;
     float: right;
 }

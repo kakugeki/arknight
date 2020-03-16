@@ -30,3 +30,5 @@
     function closeVoiceInfo() {
     voiceInfo.style.width = "0";
     }
+
+$(window).load(function() {

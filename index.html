@@ -41,7 +41,16 @@
                     </div>
                     <div class="row bottom">
                         <!-ICON CLASS--> 
-                        <div class="op-class"><img id="op-class"  src="img/class_specialist.png"></div>
+                        <div class="op-class">
+                            <img style="display:none" id="classCaster" src="img/class_caster.png">
+                            <img style="display:none" id="classDefender" src="img/class_defender.png">
+                            <img style="display:none" id="classGuard" src="img/class_guard.png">
+                            <img style="display:none" id="classMedic" src="img/class_medic.png">
+                            <img style="display:none" id="classSniper" src="img/class_sniper.png">
+                            <img style="display:none" id="classSpecialist" src="img/class_specialist.png">
+                            <img style="display:none" id="classSupporter" src="img/class_supporter.png">
+                            <img style="display:none" id="classVanguard" src="img/class_vanguard.png">
+                        </div>
                         <!-OPERATOR NAME--> 
                         <div id="op-name" class="op-name">$name</div>
                         <!-ARTIST NAME--> 
@@ -232,7 +241,12 @@
     <hr>
 </div>
 
+
+    <div id="operatorClass"></div>
+    
+
 <script>
+    
     $(document).ready(function(){
         $(".op-individual").click(function(){
             $("#page-list").fadeToggle(200).css("display", "none");
@@ -259,21 +273,31 @@
     });
 
     $(document).ready(function(){
+
+        
         $("#op1").click(function(){
-            $("#loading").fadeIn(200);
-            $("#op-name").load("demo_test.txt #p1");
             $.ajax({
             type: "GET",
-            url: "profile/template/operator.txt",
+            url: "character/template/operator.txt",
             dataType: "script"
             });
         });
-    });    
+        $(".op-individual").click(function(){
+           $.ajax({
+            type: "GET",
+            url: "character/master.js",
+            dataType: "script"
+            }); 
+        });
+    });
+    
     
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     if (isMobile) {
     document.getElementById("mobileWarn").innerHTML="Not optimized for mobile, some stuff might break";
     }
+    
+    
     
     
 </script>
