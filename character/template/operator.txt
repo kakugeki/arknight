@@ -1,24 +1,27 @@
-
-
 // CLASS SELECTION
-// Caster Defender Guard Medic
-// Sniper Specialist Supporter Vanguard
+// caster defender guard gedic
+// sniper specialist supporter vanguard
 
 // FACTION SELECTION
-// Abyssal Blacksteel Kazimierz Kjerag
-// Laterano Leithanien Lungmen Penguin
-// Reunion Rhine Rhodes Rim
-// Siesta Ursus Victoria 
+// abyssal black kazimierz kjerag
+// laterano leithanien lungmen penguin
+// reunion rhine rhodes rim
+// siesta ursus victoria 
+
+// TYPE THE VARIABLE IN LOWER-CASE!!!
 
 var operator = {
     name:       "NAME",
-    gclass:     "specialist",
-    faction:    "FACTION",
+    gclass:     "vanguard",
+    faction:    "rhodes",
     artist:     "YOUR NAME",
-    profile:    false,
-    voice:      false
+    
+    // SET TO TRUE IF YOU HAVE PROFILE AND/OR VOICE LINE
+    profile:    true,
+    voice:      true
 };
 
+// IGNORE IF YOU DON'T HAVE PROFILE
 var profile = {
     codeName:   "NAME",
     gender:     "GENDER",
@@ -36,18 +39,93 @@ var profile = {
     arts:       "Standard"
 };
 
+///////////////////////////////////////////////////////////////////////////////
+// SCRIPT, IGNORE THESE!!
+infName.innerHTML = operator.name;
+infArt.innerHTML = operator.artist;
+classNull.style.display = "none";
+fNull.style.display = "none";
 
-// SCRIPT, IGNORE THESE
-document.getElementById("op-name").innerHTML = operator.name;
-document.getElementById("btn-artist").innerHTML = operator.artist;
 
 if (operator.profile == true) {
-    document.getElementById("profileExist").style.display = "block";
+    profTrue.style.visibility = "visible";
 }
 if (operator.voice == true) {
-    document.getElementById("voiceExist").style.display = "block";
+    voicTrue.style.visibility = "visible";
 }
 
 
 
 //CLASS IFS
+    if (operator.gclass == "caster") {
+        cCas.style.display = "block";
+    }
+    if (operator.gclass == "defender") {
+        cDef.style.display = "block";
+    }
+    if (operator.gclass == "guard") {
+        cGua.style.display = "block";
+    }
+    if (operator.gclass == "medic") {
+        cMed.style.display = "block";
+    }
+    if (operator.gclass == "sniper") {
+        cSni.style.display = "block";
+    }
+    if (operator.gclass == "specialist") {
+        cSpe.style.display = "block";
+    }
+    if (operator.gclass == "supporter") {
+        cSup.style.display = "block";
+    }
+    if (operator.gclass == "vanguard") {
+        cVan.style.display = "block";
+    }
+
+//FACTION IFS
+    if (operator.faction == "abyssal") {
+        fAby.style.display = "block";
+    }
+    if (operator.faction == "black") {
+        fBla.style.display = "block";
+    }
+    if (operator.faction == "kazimierz") {
+        fKaz.style.display = "block";
+    }
+    if (operator.faction == "kjerag") {
+        fKje.style.display = "block";
+    }
+    if (operator.faction == "laterano") {
+        ffLat.style.display = "block";
+    }
+    if (operator.faction == "leithanien") {
+        fLei.style.display = "block";
+    }
+    if (operator.faction == "lungmen") {
+        fLun.style.display = "block";
+    }
+    if (operator.faction == "penguin") {
+        fPen.style.display = "block";
+    }
+    if (operator.faction == "reunion") {
+        fReu.style.display = "block";
+    }
+    if (operator.faction == "rhine") {
+        fRhi.style.display = "block";
+    }
+    if (operator.faction == "rhodes") {
+        fRho.style.display = "block";
+    }
+    if (operator.faction == "rim") {
+        fRim.style.display = "block";
+    }
+    if (operator.faction == "siesta") {
+        fSie.style.display = "block";
+    }
+    if (operator.faction == "ursus") {
+        fUrs.style.display = "block";
+    }
+    if (operator.faction == "victoria") {
+        fVic.style.display = "block";
+    }
+

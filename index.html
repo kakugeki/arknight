@@ -22,16 +22,34 @@
 	<div class="entry">	
 		
 <!-PAGE 2, OPERATOR PAGE-->
-        <!-ICON FACTION--> 
         <div id="page-operator" class="entryoperator">
-           <!-OPERATOR IMAGE-->
+<!-OPERATOR IMAGE-->
                 <div class="op-img">
                 <center>
                 <img id="op-img" style="opacity: 20%" src="img/operator/Mithril.png" onclick="myFunctionZoomOp()">
                 </center>
             </div>
            
-            <div class="op-faction"><img id="op-faction" src="img/Faction-rhodesisland.png"></div>   
+<!-ICON FACTION--> 
+            <div class="op-faction">
+                <img style="display:block;visibility:hidden" id="factionNull" src="img/Faction-rhodesisland.png">
+                <img id="factionAby" src="img/Faction-abyssal.png">
+                <img id="factionBla" src="img/Faction-blacksteel.png">
+                <img id="factionKaz" src="img/Faction-kazimierz.png">
+                <img id="factionKje" src="img/Faction-kjerag.png">
+                <img id="factionLat" src="img/Faction-laterano.png">
+                <img id="factionLei" src="img/Faction-leithanien.png">
+                <img id="factionLun" src="img/Faction-lungmen.png">
+                <img id="factionPen" src="img/Faction-penguinlogistics.png">
+                <img id="factionReu" src="img/Faction-reunionmovement.png">
+                <img id="factionRhi" src="img/Faction-rhinelab.png">
+                <img id="factionRho" src="img/Faction-rhodesisland.png">
+                <img id="factionRim" src="img/Faction-rimbilliton.png">
+                <img id="factionSie" src="img/Faction-siesta.png">
+                <img id="factionUrs" src="img/Faction-ursus.png">
+                <img id="factionVic" src="img/Faction-victoria.png">
+                
+            </div>   
             
             <div id="op-transition" class="operator select" style="display: show"> 
                 <div class="column left">    
@@ -40,21 +58,22 @@
                         <div class="return"><img id="btn-return" src="img/ui-back.png"></div> 
                     </div>
                     <div class="row bottom">
-                        <!-ICON CLASS--> 
+<!-ICON CLASS--> 
                         <div class="op-class">
-                            <img style="display:none" id="classCaster" src="img/class_caster.png">
-                            <img style="display:none" id="classDefender" src="img/class_defender.png">
-                            <img style="display:none" id="classGuard" src="img/class_guard.png">
-                            <img style="display:none" id="classMedic" src="img/class_medic.png">
-                            <img style="display:none" id="classSniper" src="img/class_sniper.png">
-                            <img style="display:none" id="classSpecialist" src="img/class_specialist.png">
-                            <img style="display:none" id="classSupporter" src="img/class_supporter.png">
-                            <img style="display:none" id="classVanguard" src="img/class_vanguard.png">
+                            <img style="display:block; visibility:hidden" id="classNull" src="img/class_caster.png">
+                            <img id="classCas" src="img/class_caster.png">
+                            <img id="classDef" src="img/class_defender.png">
+                            <img id="classGua" src="img/class_guard.png">
+                            <img id="classMed" src="img/class_medic.png">
+                            <img id="classSni" src="img/class_sniper.png">
+                            <img id="classSpe" src="img/class_specialist.png">
+                            <img id="classSup" src="img/class_supporter.png">
+                            <img id="classVan" src="img/class_vanguard.png">
                         </div>
-                        <!-OPERATOR NAME--> 
-                        <div id="op-name" class="op-name">$name</div>
-                        <!-ARTIST NAME--> 
-                        <button id="btn-artist" class="artist-name">$artist</button>
+<!-OPERATOR NAME--> 
+                        <div id="op-name" class="op-name"></div>
+<!-ARTIST NAME--> 
+                        <button id="btn-artist" class="artist-name">Loading..</button>
                     </div>     
                 </div>
                 <div class="column right">    
@@ -175,7 +194,7 @@
             <div class="operator list">                 
                 <div id="op1" class="op-individual">
                     <img src="img/operator/illith.png">  
-                    <div id="op-nameList1">123456789123</div>
+                    <div id="op-nameList1">TEMPURATE</div>
                 </div>
                 
                 <div id="op2" class="op-individual">
@@ -247,6 +266,41 @@
 
 <script>
     
+    var
+    cNull = document.getElementById("classNull"),
+    cCas = document.getElementById("classCas"),
+    cDef = document.getElementById("classDef"),
+    cGua = document.getElementById("classGua"),
+    cMed = document.getElementById("classMed"),
+    cSni = document.getElementById("classSni"),
+    cSpe = document.getElementById("classSpe"),
+    cSup = document.getElementById("classSup"),
+    cVan = document.getElementById("classVan"),
+        
+    fNull = document.getElementById("factionNull"),
+    fAby = document.getElementById("factionAby"),
+    fBla = document.getElementById("factionBla"),
+    fKaz = document.getElementById("factionKaz"),
+    fKje = document.getElementById("factionKje"),
+    fLat = document.getElementById("factionLat"),
+    fLei = document.getElementById("factionLei"),
+    fLun = document.getElementById("factionLun"),
+    fPen = document.getElementById("factionPen"),
+    fReu = document.getElementById("factionReu"),
+    fRhi = document.getElementById("factionRhi"),
+    fRho = document.getElementById("factionRho"),
+    fRim = document.getElementById("factionRim"),
+    fSie = document.getElementById("factionSie"),
+    fUrs = document.getElementById("factionUrs"),
+    fVic = document.getElementById("factionVic"),
+        
+    infName = document.getElementById("op-name"),
+    infArt = document.getElementById("btn-artist"),
+        
+    profTrue = document.getElementById("profileExist"),
+    voicTrue = document.getElementById("voiceExist")
+
+    
     $(document).ready(function(){
         $(".op-individual").click(function(){
             $("#page-list").fadeToggle(200).css("display", "none");
@@ -273,8 +327,6 @@
     });
 
     $(document).ready(function(){
-
-        
         $("#op1").click(function(){
             $.ajax({
             type: "GET",
@@ -282,13 +334,10 @@
             dataType: "script"
             });
         });
-        $(".op-individual").click(function(){
-           $.ajax({
-            type: "GET",
-            url: "character/master.js",
-            dataType: "script"
-            }); 
-        });
+        
+        
+        
+        
     });
     
     

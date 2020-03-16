@@ -148,9 +148,10 @@ body{
     display: none;
 }
 .operator.list img{
+    background-color: gray;
     transition: 0.5s;
     width: 120px;
-    border: black solid 2px;
+    border: white solid 2px;
 }
 .op-individual {
     color: black;
@@ -160,6 +161,13 @@ body{
     float: left;
     background-color: white;
     cursor: pointer;
+    height: 142px;
+    width: 124px;
+}
+.op-individual div{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 2px;
 }
 .op-individual:hover {
     box-shadow: 0px 0px 0px 4px white
@@ -197,8 +205,10 @@ body{
     border: 2px solid white;
 }
 .op-class img{
+    display: none;
     margin-top: 8px;
     margin-left: 8px;
+    margin-right: 16px;
     float: left;
     width: 112px;
 }
@@ -208,6 +218,7 @@ body{
     transition: 0.5s;
 }
 .op-faction img{
+    display: none;
     width: 296px;
     opacity: 30%;
     margin:-70px 0px 0px -38px;
@@ -240,7 +251,7 @@ body{
     box-shadow: 0px 0px 0px 1px white;
 }
 .profile{
-    display: none;
+    visibility: hidden;
     margin-top: 12px;
     float: right;
 }
@@ -253,7 +264,7 @@ body{
     box-shadow: 0px 0px 0px 1px white;
 }
 .voice{
-    display: none;
+    visibility: hidden;
     margin-top: 12px;
     float: right;
 }
